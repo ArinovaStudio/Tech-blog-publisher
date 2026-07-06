@@ -3,6 +3,7 @@
 import { useState } from 'react'
 import { Search, Menu, X } from 'lucide-react'
 import { ThemeToggle } from './theme-toggle'
+import { ChevronRight } from 'lucide-react';
 
 export function Navbar() {
   const [isOpen, setIsOpen] = useState(false)
@@ -52,8 +53,9 @@ export function Navbar() {
             </div>
 
             <ThemeToggle />
-            <button className="hidden sm:inline-block px-3 sm:px-4 py-2 rounded-lg bg-primary text-primary-foreground hover:bg-primary/90 transition-colors text-sm font-medium">
+            <button className="inline-flex items-center gap-2 px-3 sm:px-4 py-2 rounded-full bg-gray-100 text-primary-foreground hover:bg-primary/90 transition-colors text-sm font-medium">
               Get Started
+              <ChevronRight size={18} />
             </button>
             <button 
               onClick={() => setIsOpen(!isOpen)}
